@@ -1,0 +1,48 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+.app__videos {
+  position: relative;
+  height: 100vh;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 720px;
+  overflow: scroll;
+
+  scroll-snap-type: y mandatory;
+}
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+.app__videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media screen and (max-width: 730px) {
+  .app {
+    width: 100vw;
+    height: 70vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    align-items: center;
+  }
+  .app__videos {
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    scroll-snap-type: y mandatory;
+  }
+}
